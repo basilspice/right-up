@@ -118,26 +118,15 @@ if yes is selected render the input  box for the theme to be inputed
           />
         </form>
         {loading && (
-          <div
-            class="modal fade"
-            id="loadingModal"
-            tabindex="-1"
-            role="dialog"
-            aria-labelledby="exampleModalCenterTitle"
-            aria-hidden="true"
-          >
-            <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h3 class="modal-title" id="loadingTitle">
-                    Your leftover recipe is coming <text class={styles.brand}>Right-Up</text>
-                  </h3>
-                </div>
-                <div class="modal-body">
-                  <img src="/loading.gif" class={styles.loading} />
-                </div>
-                <div class="modal-footer"></div>
-              </div>
+          <div>
+            <div>
+              <h3>
+                Your leftover recipe is coming{" "}
+                <text class={styles.brand}>Right-Up</text>
+              </h3>
+            </div>
+            <div class="modal-body">
+              <img src="/loading.gif" class={styles.loading} />
             </div>
           </div>
         )}
