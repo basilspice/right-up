@@ -54,7 +54,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>OpenAI</title>
+        <title>Right-Up - Leftover Recipe Maker</title>
         <link rel="icon" href="/loading.gif" />
       </Head>
       {/* 
@@ -64,6 +64,7 @@ if yes is selected render the input  box for the theme to be inputed
 */}
       <main className={styles.main}>
         <h4>Right-Up</h4>
+        <h2>Turn your leftovers into something delicious</h2>
         <form onSubmit={onSubmit}>
           <label>Dish Style</label>
           <input
