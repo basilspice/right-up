@@ -106,7 +106,7 @@ if yes is selected render the input  box for the theme to be inputed
           <input
             type="text"
             name="ingredients"
-            placeholder="e.g. 2 steaks,1 cup corn chowder, 3 slices of bacon"
+            placeholder="e.g. 2 steaks, leftover meatloaf, 3 slices of bacon"
             value={ingredients}
             onChange={(e) => setIngredients(e.target.value)}
           />
