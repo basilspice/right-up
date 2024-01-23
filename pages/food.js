@@ -130,7 +130,7 @@ if yes is selected render the input  box for the theme to be inputed
               <div class="modal-content">
                 <div class="modal-header">
                   <h3 class="modal-title" id="loadingTitle">
-                    Your leftover recipe is coming Right-Up
+                    Your leftover recipe is coming <text class={styles.brand}>Right-Up</text>
                   </h3>
                 </div>
                 <div class="modal-body">
