@@ -63,7 +63,7 @@ if no is selected classic will be used
 if yes is selected render the input  box for the theme to be inputed 
 */}
       <main className={styles.main}>
-        <h4>Right-Up</h4>
+        <h1>Right-Up</h1>
         <h2>Turn your leftovers into something delicious</h2>
         <form onSubmit={onSubmit}>
           <label>Dish Style</label>
@@ -125,7 +125,7 @@ if yes is selected render the input  box for the theme to be inputed
                 <text class={styles.brand}>Right-Up</text>
               </h3>
             </div>
-            <div class="modal-body">
+            <div>
               <img src="/loading.gif" class={styles.loading} />
             </div>
           </div>
