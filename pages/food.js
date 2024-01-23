@@ -63,13 +63,13 @@ if no is selected classic will be used
 if yes is selected render the input  box for the theme to be inputed 
 */}
       <main className={styles.main}>
-        <h3>Right-UP</h3>
+        <h4>Right-Up</h4>
         <form onSubmit={onSubmit}>
-          <label>Dish Theme</label>
+          <label>Dish Style</label>
           <input
             type="text"
             name="dishstyle"
-            placeholder="Classic"
+            placeholder="e.g. Classic, Greek, Mexican, Korean..."
             value={dishStyle}
             onChange={(e) => setDishStyle(e.target.value)}
           />
@@ -105,7 +105,7 @@ if yes is selected render the input  box for the theme to be inputed
           <input
             type="text"
             name="ingredients"
-            placeholder="Enter the ingredients"
+            placeholder="e.g. 2 steaks,1 cup corn chowder, 3 slices of bacon"
             value={ingredients}
             onChange={(e) => setIngredients(e.target.value)}
           />
@@ -129,7 +129,7 @@ if yes is selected render the input  box for the theme to be inputed
               <div class="modal-content">
                 <div class="modal-header">
                   <h3 class="modal-title" id="loadingTitle">
-                    Your leftover recipe is coming right-up
+                    Your leftover recipe is coming Right-Up
                   </h3>
                 </div>
                 <div class="modal-body">
