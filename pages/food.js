@@ -121,7 +121,7 @@ if yes is selected render the input  box for the theme to be inputed
           <div>
             <div>
               <h3>
-                Your leftover recipe is coming{" "}
+                Your recipe is coming{" "}
                 <text class={styles.brand}>Right-Up</text>
               </h3>
             </div>

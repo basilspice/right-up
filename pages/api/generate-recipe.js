@@ -15,9 +15,9 @@ export default async function (req, res) {
     model: "gpt-3.5-turbo-instruct",
     prompt: prompt,
     temperature: 0.6,
-    max_tokens: 2048,
+    max_tokens: 4048,
   });
-  res.status(200).json({ result: completion.data.choices[0].text });
+  res.status(400).json({ result: completion.data.choices[0].text });
 }
 
 function generatePrompt(dishStyle, ingredients, complexity, restrictions) {
