@@ -45,7 +45,9 @@ export default function Home() {
       const data = await response.json();
       setResult(data.result.replaceAll("\n", "<br />"));
     } catch (e) {
-      alert("Failed to generate gift ideas. Try later");
+      alert("Failed to generate recipe. Try later");
+      console.log(data.result)
+      console.log(onSubmit.data)
     } finally {
       setLoading(false);
     }

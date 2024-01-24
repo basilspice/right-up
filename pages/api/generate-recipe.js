@@ -7,7 +7,12 @@ const openai = new OpenAIApi(configuration);
 
 export default async function (req, res) {
   const { dishStyle, ingredients, complexity, restrictions } = req.body;
-  const prompt = generatePrompt(dishStyle, ingredients, complexity, restrictions);
+  const prompt = generatePrompt(
+    dishStyle,
+    ingredients,
+    complexity,
+    restrictions
+  );
 
   console.log(prompt);
 
@@ -17,7 +22,7 @@ export default async function (req, res) {
     temperature: 0.6,
     max_tokens: 4048,
   });
-  res.status(400).json({ result: completion.data.choices[0].text });
+  res.status(500).json({ result: completion.data.choices[0].text });
 }
 
 function generatePrompt(dishStyle, ingredients, complexity, restrictions) {
