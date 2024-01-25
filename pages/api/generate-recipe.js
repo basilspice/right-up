@@ -20,7 +20,7 @@ export default async function (req, res) {
     model: "gpt-3.5-turbo-instruct",
     prompt: prompt,
     temperature: 0.6,
-    max_tokens: 4048,
+    max_tokens: 3024,
   });
   res.status(500).json({ result: completion.data.choices[0].text });
 }
