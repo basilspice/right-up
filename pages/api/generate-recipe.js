@@ -19,8 +19,8 @@ export default async function (req, res) {
   const completion = await openai.createCompletion({
     model: "gpt-3.5-turbo-instruct",
     prompt: prompt,
-    temperature: 0.5,
-    max_tokens: 3032,
+    temperature: 0.7,
+    max_tokens: 2032,
   });
   res.status(200).json({ result: completion.data.choices[0].text });
 }
