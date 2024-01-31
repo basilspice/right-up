@@ -54,3 +54,20 @@ Intake quantity
 Theme
 Complexity
 Ingredients
+
+would you like to make a desert or savory
+
+pull n/n1 title to generate image
+
+savory=""
+desert="desert"
+
+switch restrictions for allergy?
+
+on loading screen could be where the ad is played
+
+put logo in website
+
+increase tokens to 4k and switch temp to .6
+
+image ingredient puller
