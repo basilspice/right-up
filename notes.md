@@ -21,7 +21,7 @@ Try Again would need to have the logic handling of reseting state moved over to 
 
 Add Switcher for Desert or Savory
 
-Add Logo in place of text
+Add Logo in place of text !----in progress need to fix logo ---!
 
 **MVP 3**
 

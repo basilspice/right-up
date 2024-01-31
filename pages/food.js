@@ -56,8 +56,8 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Right-Up - Leftover Recipe Maker</title>
-        <link rel="icon" href="/loading.gif" />
+        <title>Right-Up - Recipe Maker</title>
+        <link rel="icon" href="/icon.png" />
       </Head>
       {/* 
 default state is Classic
@@ -65,7 +65,7 @@ if no is selected classic will be used
 if yes is selected render the input  box for the theme to be inputed 
 */}
       <main className={styles.main}>
-        <h1>Right-Up</h1>
+      <img src="/icon.png" className={styles.icon} />
         <h2>Turn your leftovers into something delicious</h2>
         <form onSubmit={onSubmit}>
           <label>Dish Style</label>
@@ -92,16 +92,30 @@ if yes is selected render the input  box for the theme to be inputed
             <option value="Michelin Star level">Michelin Level Chef</option>
           </select>
 
-          <label>Restrictions</label>
+          {/* <label>Restrictions</label>
           <select
             name="restrictions"
             value={restrictions}
             onChange={(e) => setRestrictions(e.target.value)}
           >
-            <option value="with no restrictions">None</option>
+            <option value="">None</option>
             <option value="without a stove">No Stovetop</option>
             <option value="without a oven">No Oven</option>
             <option value="without a stove or oven">No Stovetop + Oven</option>
+          </select> */}
+
+          <label>Allergies</label>
+          <select
+            name="restrictions"
+            value={restrictions}
+            onChange={(e) => setRestrictions(e.target.value)}
+          >
+            <option value="">None</option>
+            <option value="with an allergy to peanuts">Peanuts</option>
+            <option value="with an allergy to tree nuts">Tree Nuts</option>
+            <option value="with an allergy to peanuts and tree nuts">All Nuts</option>
+            <option value="with an allergy to gluten">Gluten</option>
+            <option value="with an allergy to dairy">Dairy</option>
           </select>
 
           <label>Ingredients</label>
