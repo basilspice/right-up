@@ -2,6 +2,23 @@
 
 Switch the restrictions over to allergies
 
+Reduce amount of complexity to make generating a "different recipe easier"
+
+E.G. 
+
+Basic and Simple are actually the same "complexity" but will use different key words for the search result. 
+
+I would like a basic...
+
+would be the first result. 
+
+Try Again would use the same parameters given except use the word simple instead of basic;
+I would like a simple.....
+to potentially yield different results. Need to do some more testing on OpenAI
+
+Try Again would need to have the logic handling of reseting state moved over to generate NEW recipe. 
+
+
 Add Switcher for Desert or Savory
 
 Add Logo in place of text
@@ -10,7 +27,12 @@ Add Logo in place of text
 
 Generate Images based off of recipe return title
 
+**MVP 4**
 
+Try Again or Generate another recipe will now call a different AI api to generate the recipe. 
+
+
+**Brainstorming**
 
 Recipe My Fridge
 
