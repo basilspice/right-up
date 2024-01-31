@@ -1,3 +1,17 @@
+**MVP 2**
+
+Switch the restrictions over to allergies
+
+Add Switcher for Desert or Savory
+
+Add Logo in place of text
+
+**MVP 3**
+
+Generate Images based off of recipe return title
+
+
+
 Recipe My Fridge
 
 ingredient ditcher
@@ -62,12 +76,11 @@ pull n/n1 title to generate image
 savory=""
 desert="desert"
 
-switch restrictions for allergy?
 
 on loading screen could be where the ad is played
 
-put logo in website
-
-increase tokens to 4k and switch temp to .6
+put logo in in place of text
 
 image ingredient puller
+
+Could have an option for camping which would be wood fired or something. Maybe an entire different prompt for camping food
