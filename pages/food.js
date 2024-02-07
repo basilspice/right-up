@@ -15,6 +15,7 @@ export default function Home() {
   const [ingredients, setIngredients] = useState("");
   const [complexity, setComplexity] = useState("");
   const [restrictions, setRestrictions] = useState("");
+  const [allergies, setAllergies] = useState("");
   //const [theme, setTheme] = useState("");
   // const [ingredientQuantity, setIngredientQuantity] = useState(1);
   const [loading, setLoading] = useState(false);
@@ -39,6 +40,7 @@ export default function Home() {
           ingredients,
           complexity,
           restrictions,
+          allergies,
         }),
       });
 
@@ -46,8 +48,8 @@ export default function Home() {
       setResult(data.result.replaceAll("\n", "<br />"));
     } catch (e) {
       alert("Failed to generate recipe. Try later");
-      console.log(data.result)
-      console.log(onSubmit.data)
+      console.log(data.result);
+      console.log(onSubmit.data);
     } finally {
       setLoading(false);
     }
@@ -65,8 +67,8 @@ if no is selected classic will be used
 if yes is selected render the input  box for the theme to be inputed 
 */}
       <main className={styles.main}>
-      <img src="/icon.png" className={styles.icon} />
-        <h2>Turn your leftovers into something delicious</h2>
+        <img src="/icon.png" className={styles.icon} />
+        <h2>Turn some things into something delicious</h2>
         <form onSubmit={onSubmit}>
           <label>Dish Style</label>
           <input
@@ -87,12 +89,12 @@ if yes is selected render the input  box for the theme to be inputed
             <option value="Simple">Simple</option>
             <option value="Average Diffuclty">Average</option>
             <option value="Complex">Complex</option>
-            <option value="Hard">Hard</option>
-            <option value="Master level">Master Chef</option>
+            {/* <option value="Hard">Hard</option> */}
+            {/* <option value="Master level">Master Chef</option> */}
             <option value="Michelin Star level">Michelin Level Chef</option>
           </select>
 
-          {/* <label>Restrictions</label>
+          <label>Restrictions</label>
           <select
             name="restrictions"
             value={restrictions}
@@ -102,21 +104,16 @@ if yes is selected render the input  box for the theme to be inputed
             <option value="without a stove">No Stovetop</option>
             <option value="without a oven">No Oven</option>
             <option value="without a stove or oven">No Stovetop + Oven</option>
-          </select> */}
+          </select>
 
           <label>Allergies</label>
-          <select
-            name="restrictions"
-            value={restrictions}
-            onChange={(e) => setRestrictions(e.target.value)}
-          >
-            <option value="">None</option>
-            <option value="with an allergy to peanuts">Peanuts</option>
-            <option value="with an allergy to tree nuts">Tree Nuts</option>
-            <option value="with an allergy to peanuts and tree nuts">All Nuts</option>
-            <option value="with an allergy to gluten">Gluten</option>
-            <option value="with an allergy to dairy">Dairy</option>
-          </select>
+          <input
+            type="text"
+            name="allergies"
+            placeholder="e.g. Nothing, Tree Nuts, Shellfish"
+            value={allergies}
+            onChange={(e) => setAllergies(e.target.value)}
+          />
 
           <label>Ingredients</label>
           <input
@@ -137,8 +134,7 @@ if yes is selected render the input  box for the theme to be inputed
           <div>
             <div>
               <h3>
-                Your recipe is coming{" "}
-                <text class={styles.brand}>Right-Up</text>
+                Your recipe is coming <text class={styles.brand}>Right-Up</text>
               </h3>
             </div>
             <div>

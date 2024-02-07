@@ -106,3 +106,7 @@ put logo in in place of text
 image ingredient puller
 
 Could have an option for camping which would be wood fired or something. Maybe an entire different prompt for camping food
+
+pull key words out to keep "categories"
+
+accounts will have the ability to save their preferences which will have anything like allergies and stuff
