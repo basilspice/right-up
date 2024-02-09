@@ -17,7 +17,7 @@ export default async function (req, res) {
   );
 
   console.log(prompt);
-  console.log(prompt.allergies);
+  
 
   const completion = await openai.createCompletion({
     model: "gpt-3.5-turbo-instruct",
@@ -35,5 +35,5 @@ function generatePrompt(
   restrictions,
   allergies
 ) {
-  return `I have ${ingredients} and would like a ${complexity} ${dishStyle} themed recipe to make using those ingredients ${restrictions} and with an allergy to ${allergies}`;
+  return `I have ${ingredients} and would like a ${complexity} ${dishStyle} themed recipe to make using those ingredients with ${restrictions} and with an allergy to ${allergies}`;
 }
