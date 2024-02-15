@@ -60,7 +60,7 @@ export default function Home() {
         <title>Right-Up - AI Assisted Recipe Generator</title>
         <link rel="icon" href="/icon.png" />
       </Head>
-     
+
       <main className={styles.main}>
         <img src="/icon.png" className={styles.icon} />
         <h2>Turn some things into something delicious</h2>
@@ -75,6 +75,15 @@ export default function Home() {
           />
 
           <label>Complexity</label>
+          <input
+            type="text"
+            name="complexity"
+            placeholder="e.g. Michelin Star, Simple, Advanced..."
+            value={complexity}
+            onChange={(e) => setComplexity(e.target.value)}
+          />
+
+          {/* <label>Complexity</label>
           <select
             name="complexity"
             value={complexity}
@@ -84,28 +93,14 @@ export default function Home() {
             <option value="Simple">Simple</option>
             <option value="Average Diffuclty">Average</option>
             <option value="Complex">Complex</option>
-            {/* <option value="Hard">Hard</option> */}
-            {/* <option value="Master level">Master Chef</option> */}
             <option value="Michelin Star level">Michelin Level Chef</option>
-          </select>
-
-          {/* <label>Restrictions</label>
-          <select
-            name="restrictions"
-            value={restrictions}
-            onChange={(e) => setRestrictions(e.target.value)}
-          >
-            <option value="">None</option>
-            <option value="without a stove">No Stovetop</option>
-            <option value="without a oven">No Oven</option>
-            <option value="without a stove or oven">No Stovetop + Oven</option>
           </select> */}
 
           <label>Allergies</label>
           <input
             type="text"
             name="allergies"
-            placeholder="e.g. Nothing, Tree Nuts, Shellfish"
+            placeholder="e.g. Nothing, Tree Nuts, Shellfish..."
             value={allergies}
             onChange={(e) => setAllergies(e.target.value)}
           />
@@ -114,7 +109,7 @@ export default function Home() {
           <input
             type="text"
             name="ingredients"
-            placeholder="e.g. 2 steaks, leftover meatloaf, 3 slices of bacon"
+            placeholder="e.g. Panang Curry, 3 Slices of Bacon, 2 Duck Eggs"
             value={ingredients}
             onChange={(e) => setIngredients(e.target.value)}
           />
