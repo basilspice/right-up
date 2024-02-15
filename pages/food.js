@@ -14,9 +14,9 @@ export default function Home() {
   const [dishStyle, setDishStyle] = useState("");
   const [ingredients, setIngredients] = useState("");
   const [complexity, setComplexity] = useState("");
-  const [restrictions, setRestrictions] = useState("");
   const [allergies, setAllergies] = useState("");
-  //const [theme, setTheme] = useState("");
+  // const [restrictions, setRestrictions] = useState("");
+  // const [theme, setTheme] = useState("");
   // const [ingredientQuantity, setIngredientQuantity] = useState(1);
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState();
@@ -39,7 +39,6 @@ export default function Home() {
           dishStyle,
           ingredients,
           complexity,
-          restrictions,
           allergies,
         }),
       });
@@ -58,14 +57,10 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Right-Up - Recipe Maker</title>
+        <title>Right-Up - AI Assisted Recipe Generator</title>
         <link rel="icon" href="/icon.png" />
       </Head>
-      {/* 
-default state is Classic
-if no is selected classic will be used
-if yes is selected render the input  box for the theme to be inputed 
-*/}
+     
       <main className={styles.main}>
         <img src="/icon.png" className={styles.icon} />
         <h2>Turn some things into something delicious</h2>
@@ -94,7 +89,7 @@ if yes is selected render the input  box for the theme to be inputed
             <option value="Michelin Star level">Michelin Level Chef</option>
           </select>
 
-          <label>Restrictions</label>
+          {/* <label>Restrictions</label>
           <select
             name="restrictions"
             value={restrictions}
@@ -104,7 +99,7 @@ if yes is selected render the input  box for the theme to be inputed
             <option value="without a stove">No Stovetop</option>
             <option value="without a oven">No Oven</option>
             <option value="without a stove or oven">No Stovetop + Oven</option>
-          </select>
+          </select> */}
 
           <label>Allergies</label>
           <input

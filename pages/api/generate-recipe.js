@@ -6,13 +6,12 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 export default async function (req, res) {
-  const { dishStyle, ingredients, complexity, restrictions, allergies } =
+  const { dishStyle, ingredients, complexity, allergies } =
     req.body;
   const prompt = generatePrompt(
     dishStyle,
     ingredients,
     complexity,
-    restrictions,
     allergies
   );
 
@@ -32,8 +31,7 @@ function generatePrompt(
   dishStyle,
   ingredients,
   complexity,
-  restrictions,
   allergies
 ) {
-  return `I have ${ingredients} and would like a ${complexity} ${dishStyle} themed recipe to make using those ingredients with ${restrictions} and with an allergy to ${allergies}`;
+  return `I have ${ingredients} and would like a ${complexity} ${dishStyle} themed recipe to make using those ingredients with an allergy to ${allergies}`;
 }
