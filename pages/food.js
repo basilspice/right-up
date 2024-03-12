@@ -69,7 +69,7 @@ export default function Home() {
           <input
             type="text"
             name="dishstyle"
-            placeholder="e.g. Classic, Greek, Mexican, Korean..."
+            placeholder="Dessert, Korean Dinner, Greek, Italian..."
             value={dishStyle}
             onChange={(e) => setDishStyle(e.target.value)}
           />
@@ -78,7 +78,7 @@ export default function Home() {
           <input
             type="text"
             name="complexity"
-            placeholder="e.g. Michelin Star, Simple, Advanced..."
+            placeholder="Michelin Star, Simple, Advanced..."
             value={complexity}
             onChange={(e) => setComplexity(e.target.value)}
           />
@@ -100,7 +100,7 @@ export default function Home() {
           <input
             type="text"
             name="allergies"
-            placeholder="e.g. Nothing, Tree Nuts, Shellfish..."
+            placeholder="Nothing, Tree Nuts, Shellfish, Dairy..."
             value={allergies}
             onChange={(e) => setAllergies(e.target.value)}
           />
@@ -109,7 +109,7 @@ export default function Home() {
           <input
             type="text"
             name="ingredients"
-            placeholder="e.g. Panang Curry, 3 Slices of Bacon, 2 Duck Eggs"
+            placeholder="Panang Curry, 3 Slices of Bacon, 2 Duck Eggs"
             value={ingredients}
             onChange={(e) => setIngredients(e.target.value)}
           />
@@ -123,12 +123,12 @@ export default function Home() {
         {loading && (
           <div>
             <div>
+            <div>
+              <img src="/loading.gif" class={styles.loading} />
+            </div>
               <h3>
                 Your recipe is coming <text class={styles.brand}>Right-Up</text>
               </h3>
-            </div>
-            <div>
-              <img src="/loading.gif" class={styles.loading} />
             </div>
           </div>
         )}
