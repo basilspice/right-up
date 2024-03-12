@@ -38,6 +38,8 @@ Recipe My Fridge
 
 ingredient ditcher
 
+what you got
+
 modal based inputs
 
 takes how many ingredients you want to "get rid of"
